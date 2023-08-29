@@ -4,7 +4,7 @@ Even for the non-religous the Torah is a book that is a great read, its historic
 
 ## Features
 
-- ltorah has a "bookmark" feature that allows you to ave your spot
+- ltorah has a "bookmark" feature that allows you to save your spot
 - Its extremely lightweight and simple to learn
 - Since the source code consists of a single bash file its easily customizable
 
