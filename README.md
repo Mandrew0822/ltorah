@@ -1,12 +1,12 @@
 # ltorah
 
-Even for the non-religous the Torah is a book that is a great read, its historically a very powerful and important book and if that doesnt intrest you then the ideas and great morals you can take away from it should. I hope you all have a great time reading :)
+Even for the non-religous the Torah is a book that is a great read, its historically a very powerful and important book and if that doesn't interest you then the ideas and great morals you can take away from it should. I hope you all have a great time reading :)
 
 ## Features
 
 - ltorah has a "bookmark" feature that allows you to ave your spot
 - Its extremely lightweight and simple to learn
-- Since the source cod consists of a single bash file its easily customizable
+- Since the source code consists of a single bash file its easily customizable
 
 ## Installation
 
