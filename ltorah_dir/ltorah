@@ -1,0 +1,56 @@
+#!/bin/bash
+
+file_content=$(</usr/local/ltorah_dir/torah.txt)
+
+lines=()
+IFS=$'\n' read -rd '' -a lines <<< "$file_content"
+
+bookmark="/usr/local/ltorah_dir/pg.bookmark"
+
+current_line=0
+lines_per_page=40
+
+if [[ -f "$bookmark" ]]; then
+    current_line=$(cat "$bookmark")
+fi
+
+display() {
+    clear
+    status_bar="Line $((current_line + 1)) / ${#lines[@]} Controls: z = down, x = up, q = exit, b = bookmark to read part later"
+    for ((i = current_line; i < current_line + lines_per_page && i < ${#lines[@]}; i++)); do
+        echo "${lines[i]}"
+    done
+    echo -e "\e[0;30;47m${status_bar}\e[m"
+}
+
+scroll_down() {
+    ((current_line++))
+    if ((current_line >= ${#lines[@]})); then
+        current_line=$(( ${#lines[@]} - 1 ))
+    fi
+
+}
+
+scroll_up() {
+    ((current_line--))
+    if ((current_line < 0)); then
+        current_line=0
+    fi
+
+}
+
+display
+
+while true; do
+    read -n 1 key
+
+    case "$key" in
+        q) break ;;
+        b) echo "$current_line" > "$bookmark" ;;
+        "x") scroll_up ;;
+        "z") scroll_down ;;
+        *) ;;
+    esac
+
+    display
+done
