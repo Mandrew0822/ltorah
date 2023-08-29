@@ -14,7 +14,7 @@ To install ltorah, follow these steps:
 
      git clone https://github.com/Mandrew0822/ltorah
      cd ltorah
-     ./build.sh or make install
+     sudo sh build.sh or make install
 
 ## Usage
 
