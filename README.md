@@ -18,7 +18,7 @@ To install ltorah, follow these steps:
 
 ## Usage
 
-To use Snoop, run the `ltorah` command:
+To use ltorah, run the `ltorah` command:
 
     ltorah
 
