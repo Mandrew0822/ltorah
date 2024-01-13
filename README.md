@@ -16,6 +16,12 @@ To install ltorah, follow these steps:
      cd ltorah
      sudo sh build.sh or make install
 
+On Debian/Ubuntu use the deb file if you prefer
+
+     git clone https://github.com/Mandrew0822/ltorah
+     cd ltorah
+     sudo dpkg -i ltorah_0.0.1-1_amd64.deb
+
 ## Usage
 
 To use ltorah, run the `ltorah` command:
